@@ -3,7 +3,7 @@ const express = require('express');
 const axios = require('axios');
 const { Client } = require('@notionhq/client');
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 let notion = new Client({ auth: process.env.NOTION_ACCESS_TOKEN });
 
